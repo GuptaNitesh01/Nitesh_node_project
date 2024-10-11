@@ -17,4 +17,10 @@ module.exports=function(app){
         x.main(req,res);
         // res.send('write file');
     })
+    app.get('/api/postgre/update',(req,res)=> {
+        let x= require("../src/pg_db/update_pgdb");
+        console.log("X",x)
+        x.main(req,res);
+        // res.send('write file');
+    })
 }

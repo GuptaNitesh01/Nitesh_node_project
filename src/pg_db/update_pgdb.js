@@ -11,14 +11,14 @@ async function main (req,res){
     //   })
        
     //   await client.connect()
-    // const id = req.query.id;
-    // const name = req.query.name;
+    const id = req.query.id;
+    const name = req.query.name;
     // const city = req.query.city;
        const {getPGConnection} = require("../base/pg_connector")
        const client =await getPGConnection();
        console.log("CLIENT",client)
        
-          await client.query(`SELECT "name", "id", city FROM "nitesh_table";`, [],async function(err,data){
+          await client.query(`UPDATE public.nitesh_table SET name=$1 WHERE id = $2;`, [name,id],async function(err,data){
               if(data){
                   res.send(data.rows);
               }
