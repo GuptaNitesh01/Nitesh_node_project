@@ -23,4 +23,11 @@ module.exports=function(app){
         x.main(req,res);
         // res.send('write file');
     })
+
+    app.get('/api/postgre/search',(req,res)=> {
+        let x= require("../src/employee_db/employeelst");
+        console.log("X",x)
+        x.main(req,res);
+        // res.send('write file');
+    })
 }
