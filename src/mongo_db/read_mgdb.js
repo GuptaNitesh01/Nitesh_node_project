@@ -12,7 +12,7 @@ function main (req,res){
         // await client.connect();
         // console.log('Connected successfully to server');
         const db =await getmongodbConnection();
-     const rec = await  db.collection('col_1').find(req.body).toArray();
+        const rec = await  db.collection('col_1').find(req.body).toArray();
         console.log(rec) 
         res.send(rec);       
         // return 'done.';

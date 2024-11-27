@@ -7,6 +7,17 @@ module.exports=function(app){
     require('./file_system')(app);
     require('./postgre')(app);
     require('./mongo_db')(app);
+    require('./api_internal')(app);
+    require('./gmail')(app);
+    require('./pagination')(app);
+    require('./event_emitter')(app);
+    require('./joi_validator')(app);
+
+
+
+
+
+
 
     
 

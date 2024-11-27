@@ -34,6 +34,18 @@ module.exports=function(app){
         console.log("X",x)
         x.main(req,res);
         })
+    
+    app.post('/filesystem/renamefile_async',(req,res)=>{
+            let x= require("../src/file_system/renamefile_async");
+            console.log("X",x)
+            x.main(req,res);
+            })
+
+    app.post('/filesystem/multiple_files',(req,res)=>{
+        let x= require("../src/file_system/multiple_files");
+        console.log("X",x)
+        x.main(req,res);
+        })
 
     // app.get('/filesystem/deletefile_async',(req,res)=>{
     //     let x= require("../src/file_system/deletefile_async");
@@ -46,5 +58,7 @@ module.exports=function(app){
             console.log("X",x)
             x.main(req,res);
             })
+    
+
     
   }

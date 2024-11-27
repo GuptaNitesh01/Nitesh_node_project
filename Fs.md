@@ -10,7 +10,7 @@ require("./router")(app);
 
 
 
-:::: Database syatem :
+:::: Database system :
  data store in tableformat 
 
  database => multiple schemas =>  n number of  tables =>  n number of columns/attributes.

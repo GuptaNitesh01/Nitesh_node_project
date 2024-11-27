@@ -24,4 +24,17 @@ module.exports = function (app) {
         console.log("X", x)
         x.main(req, res);
     })
+
+    app.get('/mongodb/read', (req, res) => {
+        let x = require("./../src/api_internal_communication/call_other_api");
+        console.log("X", x)
+        x.main(req, res);
+    })
+    app.post('/mongodb/multiple_document', (req, res) => {
+        let x = require("../src/mongo_db/multiple_document");
+        console.log("X", x)
+        x.main(req, res);
+    })
+
+
 }
