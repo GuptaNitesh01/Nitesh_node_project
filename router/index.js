@@ -12,6 +12,15 @@ module.exports=function(app){
     require('./pagination')(app);
     require('./event_emitter')(app);
     require('./joi_validator')(app);
+    require('./stream')(app);
+    require('./read_pipe')(app);
+    require('./uuid')(app);
+    require('./jwt')(app);
+
+
+
+
+
 
 
 
